@@ -1,0 +1,111 @@
+.navbarOrigin {
+    width: 100%;
+    background-color: black !important;
+    display: flex;
+
+    justify-content: space-between;
+
+    text-align: center;
+    border-bottom: 1px solid darkorange;
+    box-shadow: 0 0 5px darkorange;
+}
+
+/* Navbar Left*/
+.navbar-left {
+    width: auto;
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logoImagen {
+    padding-top: 7px;
+    color: darkorange !important; 
+    text-shadow: 0 0 10px darkorange !important;
+    font-size: 35px;
+    padding-left: 15px;
+}
+
+.logoImagen:hover {
+    color: white !important;
+} 
+
+p {
+    color: darkorange;
+    text-shadow: 0 0 10px darkorange;
+}
+
+/* Navbar Center*/
+.categories {
+    text-shadow: 0 0 10px darkorange !important;
+    width: auto;
+}
+.list {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+}
+
+.nav-link {
+    color: darkorange !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+/* Navbar Right*/
+
+.navbar-right {
+    color: darkorange !important;
+    position: relative;
+    cursor: pointer;
+    padding-top: 10px;
+    margin-left: 40px;
+}
+
+.logoShoppingCard {
+    margin-top: 0;
+    font-size: 35px;
+}
+
+.navbar-right div {
+    width: 15px;
+    height: 15px;
+    background-color: darkorange;
+    color: black;
+    text-shadow: 0 0 10px #fff;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: -1px;
+    right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 250px;
+    height: 120px;
+    background-color: black;
+    color: darkorange;
+    text-shadow: 0 0 10px darkorange;
+    padding: 30px;
+    border: 1px solid darkorange;
+    box-shadow: 0px 0px 10px darkorange;
+}
