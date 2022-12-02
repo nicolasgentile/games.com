@@ -2,9 +2,7 @@
     width: 100%;
     background-color: black !important;
     display: flex;
-
     justify-content: space-between;
-
     text-align: center;
     border-bottom: 1px solid darkorange;
     box-shadow: 0 0 5px darkorange;
@@ -108,4 +106,49 @@ p {
     padding: 30px;
     border: 1px solid darkorange;
     box-shadow: 0px 0px 10px darkorange;
+}
+
+/* Main ItemListContainer */
+
+.ItemListContainer {
+    padding: 15px;
+    height: auto;
+    background-color: black !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+
+.card {
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+.ItemCount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.button {
+    margin: 6px;
+}
+
+.amount {
+    margin: 6px;
+    color: darkorange;
+    text-shadow: 0 0 10px darkorange;
+}
+
+/* Footer */
+
+footer {
+    height: 152px;
+    background-color: black !important;
+    border-top: 1px solid darkorange;
+    box-shadow: 0 0 5px darkorange;
 }

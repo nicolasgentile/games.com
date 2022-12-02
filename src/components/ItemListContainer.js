@@ -1,8 +1,21 @@
-const ItemListContainer = (props) => {
+// Contenedor de todos los items - Muestra en pantalla principal
+
+import ItemCard from './ItemCard'; 
+
+const ItemListContainer = () => {
     return (
-        <div>
-            <h3 className="greeting">{props.greeting}</h3>
-        </div>
+        <section className='ItemListContainer'>
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+            <ItemCard />
+        </section>
     )
 };
 
