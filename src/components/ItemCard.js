@@ -11,6 +11,7 @@ const ItemCard = ({title, price, thumbnail}) => {
                 <div class="card-img-overlay">
                     <h4 class="card-title"> {title} </h4>
                     <p class="card-text">$ {price}.</p>
+{/*                     <link to={`item/${id}`} </link> */}
                 </div>
             </div>
             <div>
