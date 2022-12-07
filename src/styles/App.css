@@ -1,3 +1,5 @@
+/* Navbar */
+
 .navbarOrigin {
     width: 100%;
     background-color: black !important;
@@ -9,11 +11,11 @@
 }
 
 /* Navbar Left*/
+
 .navbar-left {
     width: auto;
     display: flex;
     align-items: center;
-    
 }
 
 .logo {
@@ -40,6 +42,7 @@ p {
 }
 
 /* Navbar Center*/
+
 .categories {
     text-shadow: 0 0 10px darkorange !important;
     width: auto;
@@ -116,11 +119,11 @@ p {
     background-color: black !important;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
-/* Cards */
+/* Items Cards */
 
 .card {
     margin: 20px;
@@ -170,6 +173,42 @@ p {
     text-shadow: 0 0 10px white;
     border: 1px solid white;
     box-shadow: 0px 0px 10px white;
+}
+
+/* Item Detail */
+
+.detailContainer {
+    height: auto;
+    padding: 15px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.imageContainer img {
+    width: 100%;
+}
+
+.contentContainer {
+    width: 60%;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.textDetail {
+    color: darkorange;
+    text-shadow: 0 0 10px darkorange;
+    border: 1px solid darkorange;
+    box-shadow: 0px 0px 10px darkorange;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.dataDetail {
+    margin-top: 10px;
 }
 
 /* Footer */

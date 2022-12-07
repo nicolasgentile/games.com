@@ -11,7 +11,8 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<ItemListContainer />} />
-        <Route path='/detail' element={<ItemDetailContainer />} />
+        <Route path='/category/:consoleId' element={<ItemListContainer />} />
+        <Route path='/detail/:itemId' element={<ItemDetailContainer />} />
       </Routes>
       <Footer some = "Footer en construccion"/>
     </BrowserRouter>

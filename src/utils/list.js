@@ -4,7 +4,7 @@ export const list = [
     {
         id: "1",
         stock: "100",
-        category: "PS5",
+        console: "ps5",
         title: "Battlefield 2042",
         price: "10.000",
         thumbnail: "https://steamuserimages-a.akamaihd.net/ugc/1726549432550959787/946B7973D4471CF4EA5FBE5C584EA8668E3F5A6F/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
@@ -14,7 +14,7 @@ export const list = [
     {
         id: "2",
         stock: "100",
-        category: "PS5",
+        console: "ps5",
         title: "Call Of Duty Modern Warfare 2",
         price: "21.000",
         thumbnail: "https://media0.giphy.com/media/miCJhQMoMFDaD987B4/200w.gif?cid=6c09b9526g7ggaupp48ljlw23jd1tsd0fvmr9vg0wi2ljgbu&rid=200w.gif&ct=g",
@@ -24,7 +24,7 @@ export const list = [
     {
         id: "3",
         stock: "100",
-        category: "PS5",
+        console: "ps5",
         title: "Elden Ring",
         price: "16.000",
         thumbnail: "https://media.tenor.com/BGxADZTlznwAAAAd/elden-ring.gif",
@@ -34,7 +34,7 @@ export const list = [
     {
         id: "4",
         stock: "100",
-        category: "PS4",
+        console: "ps4",
         title: "Assassin's Creed Origins",
         price: "5.800",
         thumbnail: "https://64.media.tumblr.com/cfeb84def8ecd9a3858beb0f63204662/tumblr_pjrypfzLvQ1vgf6c7o2_250.gifv",
@@ -44,7 +44,7 @@ export const list = [
     {
         id: "5",
         stock: "100",
-        category: "PS4",
+        console: "ps4",
         title: "Dark Souls Remastered",
         price: "5.000",
         thumbnail: "https://i.pinimg.com/originals/6c/ef/8b/6cef8b6bf4c291224cc989897fb829f1.gif",
@@ -54,7 +54,7 @@ export const list = [
     {
         id: "6",
         stock: "100",
-        category: "PS4",
+        console: "ps4",
         title: "Monster Hunter World: Iceborne Master",
         price: "13.000",
         thumbnail: "https://steamuserimages-a.akamaihd.net/ugc/788618109320908366/7D3A9B7F64F16285F556165DFFC3F5F27DE8F840/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
@@ -64,7 +64,7 @@ export const list = [
     {
         id: "7",
         stock: "100",
-        category: "XBOX",
+        console: "xbox",
         title: "The Witcher 3: Wild Hunt",
         price: "8.000",
         thumbnail: "https://media1.giphy.com/media/Vd3MpH44gKBT2O5YGb/giphy.gif",
@@ -74,7 +74,7 @@ export const list = [
     {
         id: "8",
         stock: "100",
-        category: "XBOX",
+        console: "xbox",
         title: "DmC Devil May Cry: Definitive Edition",
         price: "7000",
         thumbnail: "https://media.tenor.com/m8Vh6YT9X78AAAAC/devil-may-cry.gif",
@@ -84,7 +84,7 @@ export const list = [
     {
         id: "9",
         stock: "100",
-        category: "WII",
+        console: "wii",
         title: "Metroid Prime 3: Corruption",
         price: "4.000",
         thumbnail: "https://thumbs.gfycat.com/YoungThirdEthiopianwolf-max-1mb.gif",
@@ -94,7 +94,7 @@ export const list = [
     {
         id: "10",
         stock: "100",
-        category: "WII",
+        console: "wii",
         title: "No More Heroes 2: Desperate Struggle",
         price: "3500",
         thumbnail: "https://media.tenor.com/4AATMKRRcjQAAAAC/travis-touchdown.gif",

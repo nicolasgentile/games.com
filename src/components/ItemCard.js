@@ -1,17 +1,16 @@
-// Card de los items - Idem a Item.js agregue el card para poder identificarlo mejor
-
 import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
 
-const ItemCard = ({title, price, thumbnail}) => {
+const ItemCard = ({id, title, price, thumbnail}) => {
     return (
         <section>
-            <div class="card" /* style="width:500px" */>
+            <div class="card">
                 <img class="card-img-top" src={thumbnail} alt="Card item"/>
                 <div class="card-img-overlay">
                     <h4 class="card-title"> {title} </h4>
                     <p class="card-text">$ {price}.</p>
-{/*                     <link to={`item/${id}`} </link> */}
+                    <Link className="nav-link" to= {`detail/${id}`} >Detalle del juego</Link>
                 </div>
             </div>
             <div>

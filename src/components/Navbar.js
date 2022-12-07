@@ -1,6 +1,6 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import CartWidget from './CartWidget'
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -12,19 +12,19 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse categories" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto list">
                         <li className="nav-item active">
-                            <a className="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                            <Link className="nav-link" to='/'>Home {/* <span class="sr-only">(current)</span> */}</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="">PS5</a>
+                            <Link className="nav-link" to='/category/ps5'>PS5</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="">PS4</a>
+                            <Link className="nav-link" to='/category/ps4'>PS4</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="">Xbox</a>
+                            <Link className="nav-link" to='/category/xbox'>Xbox</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="">Wii</a>
+                            <Link className="nav-link" to='/category/wii'>Wii</Link>
                         </li>
                     </ul>
                 </div>
