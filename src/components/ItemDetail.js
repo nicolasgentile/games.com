@@ -1,6 +1,20 @@
+import { useState } from "react";
 import ItemCount from "./ItemCount";
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ data }) => {
+
+    const [itemCount, setItemCount] = useState(0);
+
+    const goAdd = (it) => {
+        if (it > 0) {
+        alert("Seleccionaste " + it + " " + data.title);
+        setItemCount(it);
+        } else {
+            alert("Seleccione la cantidad");
+        } 
+    }
+
     return (
         <section className="detailContainer">
             <div className="imageContainer">
@@ -12,9 +26,13 @@ const ItemDetail = ({ data }) => {
                     <h4> $ {data.price} </h4>
                     <p> {data.descripticonDetail} </p>
                 </div>
-                <ItemCount />
+                {
+                    itemCount === 0
+                    ? <ItemCount stock={data.stock} first={itemCount} goAdd={goAdd} />
+                    : <Link to='/cart'><button type="button" class="btn btn-outline-danger">Revisar</button></Link>
+                }
                 <div className="dataDetail">
-                    <p>Category: {data.consoleId} </p>
+                    <p>Category: {data.console} </p>
                     <p>Stock: {data.stock} </p>
                 </div>
             </article>

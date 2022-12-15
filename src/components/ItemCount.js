@@ -1,14 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const ItemCount = () => {
+const ItemCount = ({ stock, first, goAdd}) => {
     const [amount, setAmount] = useState (0); // HOOK
 
+    useEffect( () => {
+        setAmount(first);
+    },[]);
+
     const addProduct = () => {
-        setAmount (amount + 1);
+        if (amount < stock) {
+            setAmount (amount + 1);
+        }
     };
 
     const subtractProduct = () => {
-        if (amount > 0) {
+        if (amount > first) {
             setAmount (amount - 1);
         };
     };
@@ -21,7 +27,7 @@ const ItemCount = () => {
                 <button type="button" class="btn btn-outline-danger" onClick={addProduct}>+</button>
             </div>
             <div>
-                <button type="button" class="btn btn-outline-danger">Agregar</button>
+                <button type="button" class="btn btn-outline-danger" onClick={() => goAdd(amount)}>Agregar</button>
             </div>
         </section>
     )

@@ -1,4 +1,3 @@
-import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
 
@@ -12,9 +11,6 @@ const ItemCard = ({id, title, price, thumbnail}) => {
                     <p class="card-text">$ {price}.</p>
                     <Link className="nav-link" to= {`detail/${id}`} >Detalle del juego</Link>
                 </div>
-            </div>
-            <div>
-                <ItemCount />
             </div>
         </section>    
     )

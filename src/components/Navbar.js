@@ -30,7 +30,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-right">
-                    <spam className="logoShoppingCard"><AiOutlineShoppingCart /></spam>
+                    <link className="logoShoppingCard" to='/cart'><AiOutlineShoppingCart /></link>
                     <div id="cardCounter">0</div>
                 </div>
             </nav>
