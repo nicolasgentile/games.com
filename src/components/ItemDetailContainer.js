@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     const { itemId } = useParams();
 
     useEffect(() => {
-        fetchData(2000, list.find(item => item.id == itemId))
+        fetchData(2000, list.find(item => item.id === itemId))
         .then(result => setDat(result))
         .catch(err => console.log(err))
     }, []);

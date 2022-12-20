@@ -30,7 +30,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-right">
-                    <link className="logoShoppingCard" to='/cart'><AiOutlineShoppingCart /></link>
+                    <Link className="logoShoppingCard" to='/cart'><AiOutlineShoppingCart /></Link>
                     <div id="cardCounter">0</div>
                 </div>
             </nav>

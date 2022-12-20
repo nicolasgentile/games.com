@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ItemCount from "./ItemCount";
 import { Link } from 'react-router-dom';
+import { CartContext } from "./CartContext";
 
 const ItemDetail = ({ data }) => {
 
     const [itemCount, setItemCount] = useState(0);
 
+    const { addToCart } = useContext (CartContext);
+
     const goAdd = (it) => {
         if (it > 0) {
         alert("Seleccionaste " + it + " " + data.title);
         setItemCount(it);
+        addToCart (data, it); // Llamando a la funcion global para agregar item al carrito
         } else {
             alert("Seleccione la cantidad");
         } 

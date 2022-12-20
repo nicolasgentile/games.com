@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const CartWidget = () => {
     return (
-        <div classclassName="navbar-left">
-            <div classclassName="logo">
+        <div className="navbar-left">
+            <div className="logo">
                 <Link className="navbar-brand logoImagen" to='/'><BsController /></Link>
-                <p classclassName="logoText">Games</p>
+                <p className="logoText">Games</p>
             </div>
         </div>
     )
