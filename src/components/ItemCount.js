@@ -21,13 +21,13 @@ const ItemCount = ({ stock, first, goAdd}) => {
 
     return (
         <section className="ItemCount">
-            <div class="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-outline-danger" onClick={subtractProduct}>-</button>
+            <div className="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" className="btn btn-outline-danger" onClick={subtractProduct}>-</button>
                 <span className="amount"> {amount} º </span>
-                <button type="button" class="btn btn-outline-danger" onClick={addProduct}>+</button>
+                <button type="button" className="btn btn-outline-danger" onClick={addProduct}>+</button>
             </div>
             <div>
-                <button type="button" class="btn btn-outline-danger" onClick={() => goAdd(amount)}>Agregar</button>
+                <button type="button" className="btn btn-outline-danger" onClick={() => goAdd(amount)}>Agregar</button>
             </div>
         </section>
     )

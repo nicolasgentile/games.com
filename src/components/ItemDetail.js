@@ -33,7 +33,7 @@ const ItemDetail = ({ data }) => {
                 {
                     itemCount === 0
                     ? <ItemCount stock={data.stock} first={itemCount} goAdd={goAdd} />
-                    : <Link to='/cart'><button type="button" class="btn btn-outline-danger">Revisar</button></Link>
+                    : <Link to='/cart'><button type="button" className="btn btn-outline-danger">Revisar</button></Link>
                 }
                 <div className="dataDetail">
                     <p>Category: {data.console} </p>

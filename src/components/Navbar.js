@@ -1,8 +1,15 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import CartWidget from './CartWidget'
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
 const Navbar = () => {
+
+    const number = useContext(CartContext);
+
+    let newNumber = number.howManyItems();
+
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light bg-light navbarOrigin">
@@ -31,7 +38,7 @@ const Navbar = () => {
 
                 <div className="navbar-right">
                     <Link className="logoShoppingCard" to='/cart'><AiOutlineShoppingCart /></Link>
-                    <div id="cardCounter">0</div>
+                    <div id="cardCounter"> {newNumber} </div>
                 </div>
             </nav>
         </header>
