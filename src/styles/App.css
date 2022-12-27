@@ -43,15 +43,17 @@ p {
 
 /* Navbar Center*/
 
-.categories {
+.navbar-collapse {
     text-shadow: 0 0 10px darkorange !important;
-    width: auto;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0;
 }
-.list {
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 50px;
+
+.navbar-nav li{
+    padding: 20px;
 }
 
 .nav-link {
@@ -75,9 +77,15 @@ p {
 .logoShoppingCard {
     margin-top: 0;
     font-size: 35px;
+    color: darkorange; 
+    text-shadow: 0 0 10px darkorange;
 }
 
-.navbar-right div { /* MODIFICADO */
+.logoShoppingCard:hover {
+    color: white;
+}
+
+.cardCounter { 
     width: 15px;
     height: 15px;
     background-color: darkorange;
@@ -111,7 +119,22 @@ p {
     box-shadow: 0px 0px 10px darkorange;
 }
 
+.none {
+    background-color: black;
+}
+
 /* Main ItemListContainer */
+
+.jumbotrom {
+    margin: 0 !important;
+    background-color: black !important;
+    color: darkorange !important;
+    text-shadow: 0 0 10px darkorange;
+    border: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .ItemListContainer {
     padding: 15px;
@@ -133,16 +156,33 @@ p {
     text-shadow: 0 0 10px darkorange;
     border: 1px solid darkorange;
     box-shadow: 0px 0px 10px darkorange;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.cardBodyMain {
+    height: 450px;
+}
+
+.divImageMain {
+    width: 249px;
+    height: 250px;
+    background-image: cover;
+    border-bottom: 1px solid darkorange;
+    box-shadow: 0px 0px 10px darkorange;
+}
+
+.cardImgItem {
+    height: 250px;
+    width: 100%;
+    background-image: cover;
 }
 
 .card:hover {
     color: white;
     text-shadow: 0 0 10px darkorange;
-}
-
-.card img {
-    width:100%;
-    height:250px;
 }
 
 .ItemCount {
@@ -166,6 +206,8 @@ p {
     text-shadow: 0 0 10px darkorange;
     border: 1px solid darkorange;
     box-shadow: 0px 0px 10px darkorange;
+    background-color: black;
+    padding: 4px;
 }
 
 .btn-outline-danger:hover {
@@ -211,11 +253,134 @@ p {
     margin-top: 10px;
 }
 
+/* Cart */
+
+.cartMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    padding: 3px;
+}
+
+.cartMain h3 {
+    color: darkorange;
+    text-shadow: 0 0 10px darkorange;
+}
+
+.buttons {
+    width: 50%;
+    display: flex;
+    padding: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gameDetailContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardInCart {
+    width: 97% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    border: 1px solid darkorange;
+    box-shadow: 0px 0px 10px darkorange;
+}
+
+.divImage {
+    width: 30%;
+    background-image: cover;
+    border: 1px solid darkorange;
+    box-shadow: 0px 0px 10px darkorange;
+}
+
+.cardImgCart {
+    height: 100%;
+}
+
+.cardCartBody {
+    width: 40%;
+    background-color: black;
+    border: 1px solid darkorange;
+    box-shadow: 0px 0px 10px darkorange;
+}
+
+.ShopSubDetail {
+    height: auto;
+    width: 30% !important;
+    border: 1px solid greenyellow;
+    background-color: black;
+    border: 1px solid darkorange;
+    box-shadow: 0px 0px 10px darkorange;
+}
+
+.totalCart {
+    padding: 10px;
+    border: 1px solid darkorange;
+    box-shadow: 0px 0px 10px darkorange;
+    color: darkorange;
+    text-shadow: 0 0 10px darkorange;
+    margin-bottom: 15px;
+}
+
+.space {
+    padding: 8px;
+}
+
+.resume {
+    text-decoration: underline;
+}
+
 /* Footer */
 
 footer {
-    height: 152px;
-    background-color: black !important;
+    height: auto;
+    margin: 0;
+    background-color: black;
     border-top: 1px solid darkorange;
     box-shadow: 0 0 5px darkorange;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: darkorange;
+    text-shadow: 0 0 10px darkorange;
 }
+
+  .barra {
+    padding-top: 15px;
+  }
+  
+  .barra li {
+    list-style: none;
+  }
+  
+  .barra li:hover {
+    color: white;
+    text-shadow: 0 0 10px darkorange;
+  }
+  
+  .footerRedes {
+    font-size: 20px;
+    letter-spacing: 15px;
+  }
+  
+/*   .fa-brands {
+    padding: 5px;
+    border: 1px solid #000000;
+    box-shadow: 0 0 5px #000000;
+    border-radius: 32px;
+    text-align: center;
+    padding-left: 20px;
+    color: #000000 !important;
+  } */
+  
+/*   .footerRedes i:hover {
+    background-color: #fff;
+  } */
+  

@@ -13,6 +13,7 @@ const CardContextProvider = ( {children} ) => {
             setCartList([
                 ...cartList,
                 {
+                    key: data.id,
                     id: data.id,
                     title: data.title,
                     backgroundDetail: data.backgroundDetail,
@@ -32,8 +33,7 @@ const CardContextProvider = ( {children} ) => {
     }
 
     const emptyCart = () => { // Verificar - Vaciar carrito
-        const empty = cartList.length = 0;
-        setCartList(empty);
+        setCartList([]);
     }
 
     const howManyItems = () => {
@@ -41,8 +41,18 @@ const CardContextProvider = ( {children} ) => {
         return numberItems.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
     };
 
+    const subtotalPerGame = (id) => {
+        let sub = cartList.map(data => data.id).indexOf(id);
+        return cartList[sub].price * cartList[sub].it;
+    };
+
+    const fullValue = () => {
+        let full = cartList.map(data => subtotalPerGame(data.id));
+        return full.reduce((previousValue, currentValue) => previousValue + currentValue);
+    };
+
     return (
-        <CartContext.Provider value={{cartList, addToCart, deleteGame, emptyCart, howManyItems}}>
+        <CartContext.Provider value={{cartList, addToCart, deleteGame, emptyCart, howManyItems, subtotalPerGame, fullValue}}>
             {children}
         </CartContext.Provider>
     );

@@ -17,7 +17,7 @@ const Navbar = () => {
                 <CartWidget />
 
                 <div className="collapse navbar-collapse categories" id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto list">
+                    <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
                             <Link className="nav-link" to='/'>Home {/* <span class="sr-only">(current)</span> */}</Link>
                         </li>
@@ -38,7 +38,11 @@ const Navbar = () => {
 
                 <div className="navbar-right">
                     <Link className="logoShoppingCard" to='/cart'><AiOutlineShoppingCart /></Link>
-                    <div id="cardCounter"> {newNumber} </div>
+                    {
+                        newNumber > 0    
+                        ? <div className="cardCounter"> {newNumber} </div>
+                        : <div className="none"></div>
+                    }
                 </div>
             </nav>
         </header>

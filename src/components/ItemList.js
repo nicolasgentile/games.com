@@ -5,7 +5,8 @@ const ItemList = ({ items}) => {
     return (
         <section className='ItemListContainer'>
             {
-                items.map(item => (
+                items.length > 0
+                ? items.map(item => (
                     <ItemCard 
                     key = {item.id}
                     id = {item.id}
@@ -13,6 +14,7 @@ const ItemList = ({ items}) => {
                     price = {item.price}
                     thumbnail = {item.thumbnail} />
                 ))
+                : <p> ... Cargando ...</p>
             }
         </section>
     )
