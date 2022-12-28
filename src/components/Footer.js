@@ -1,5 +1,4 @@
 import { BsFacebook } from "react-icons/bs";
-
 import { BsInstagram } from "react-icons/bs"
 import { Link } from "react-router-dom";
 
@@ -15,7 +14,7 @@ const Footer = () => {
                     </ul>
                 </nav>   
             </div>
-            <div class="footerRedes">
+            <div className="footerRedes">
                 <Link className="navbar-brand logoImagen" to='/'><BsInstagram  /></Link>
                 <Link className="navbar-brand logoImagen" to='/'><BsFacebook /></Link>
             </div>

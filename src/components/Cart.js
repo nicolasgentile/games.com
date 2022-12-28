@@ -27,7 +27,7 @@ const Cart = () => {
                     ctx.cartList.length > 0 && ctx.cartList.map(item => 
                         <div className="card cardInCart" key={item.id}>
                             <div className="divImage">
-                                <img className="card-img-top cardImgCart" src= {item.backgroundDetail} alt="Card image"/>
+                                <img className="card-img-top cardImgCart" src= {item.backgroundDetail} alt="Game"/>
                             </div>
                             <div className="card-body cardCartBody">
                                 <h4 className="card-title">{item.title}</h4>

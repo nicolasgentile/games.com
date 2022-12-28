@@ -14,3 +14,5 @@ root.render(
 // npm start
 // npm run build
 // npm i react-router-dom
+// npm i react-loading 
+// npm install firebase

@@ -1,9 +1,11 @@
 // Contenedor de todos los items - Muestra en pantalla principal
 import ItemList from "./ItemList"
-import { fetchData } from "../utils/fetchData";
+/* import { fetchData } from "../utils/fetchData"; */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-const { list } = require("../utils/list");
+/* const { list } = require("../utils/list"); */
+import { db } from "../utils/firebaseConfig";
+import { collection, getDocs } from "firebase/firestore"; 
 
 const ItemListContainer = () => {
 
@@ -11,7 +13,14 @@ const ItemListContainer = () => {
     const { consoleId } = useParams();
 
     useEffect(() => {
-        if (consoleId) {
+        const firePromise = async() => {
+            const querySnapshot = await getDocs(collection(db, "list"));
+            querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data()}`);
+            });
+        }
+        firePromise();
+/*         if (consoleId) {
         fetchData(2000, list.filter(item => item.console === consoleId))
         .then(result => setData(result))
         .catch(err => console.log(err))
@@ -19,8 +28,8 @@ const ItemListContainer = () => {
             fetchData(2000, list)
         .then(result => setData(result))
         .catch(err => console.log(err))
-        }
-    }, [consoleId])
+        } */
+    }, [consoleId]);
 
     return (
         <>

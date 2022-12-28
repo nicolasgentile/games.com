@@ -1,4 +1,5 @@
 import ItemCard from "./ItemCard";
+/* import Load from "./Load"; */
 
 const ItemList = ({ items}) => {
 
@@ -15,6 +16,7 @@ const ItemList = ({ items}) => {
                     thumbnail = {item.thumbnail} />
                 ))
                 : <p> ... Cargando ...</p>
+                /* : <Load /> */
             }
         </section>
     )

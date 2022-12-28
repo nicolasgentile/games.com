@@ -19,7 +19,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse categories" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <Link className="nav-link" to='/'>Home {/* <span class="sr-only">(current)</span> */}</Link>
+                            <Link className="nav-link" to='/'>Home</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to='/category/ps5'>PS5</Link>

@@ -36,17 +36,17 @@ const CardContextProvider = ( {children} ) => {
         setCartList([]);
     }
 
-    const howManyItems = () => {
+    const howManyItems = () => { // Cantidad de items en el carrito
         let numberItems = cartList.map(data => data.it);
         return numberItems.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
     };
 
-    const subtotalPerGame = (id) => {
+    const subtotalPerGame = (id) => { //Costo por juego segun cantidad
         let sub = cartList.map(data => data.id).indexOf(id);
         return cartList[sub].price * cartList[sub].it;
     };
 
-    const fullValue = () => {
+    const fullValue = () => { // Costo total
         let full = cartList.map(data => subtotalPerGame(data.id));
         return full.reduce((previousValue, currentValue) => previousValue + currentValue);
     };
