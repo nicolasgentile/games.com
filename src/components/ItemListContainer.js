@@ -9,14 +9,16 @@ import { collection, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
 
-    const [data, setData] = useState([]);
+    const [datos, setDatos] = useState([]);
+    console.log(datos);
     const { consoleId } = useParams();
 
     useEffect(() => {
         const firePromise = async() => {
             const querySnapshot = await getDocs(collection(db, "list"));
             querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data()}`);
+                setDatos(doc.id)
+                console.log(`${doc.id} => ${doc.data()}`);
             });
         }
         firePromise();
@@ -31,6 +33,12 @@ const ItemListContainer = () => {
         } */
     }, [consoleId]);
 
+    useEffect(() => {
+        return(() => {
+            setDatos ([])
+        })
+    }, []);
+    
     return (
         <>
             <div className="mt-4 p-5 bg-primary text-white rounded jumbotrom">
@@ -39,7 +47,7 @@ const ItemListContainer = () => {
                 <p>Estamos seguros que lo encontraras y no te arrepentiras de invertir en tu diversion.</p>
                 <p>Varias plataformas. Proximamente agregaremos mas consolas y juegos!</p>
             </div>
-            <ItemList items={data} />
+            <ItemList items={datos} />
         </>
     )
 };
