@@ -1,22 +1,39 @@
 import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from "react";
-import { fetchData } from "../utils/fetchData";
 import { useParams } from "react-router-dom";
-const { list } = require("../utils/list");
-
+import { db } from "../utils/firebaseConfig";
+import { doc, getDoc } from "firebase/firestore"; 
 
 const ItemDetailContainer = () => {
     const [dat, setDat] = useState({});
     const { itemId } = useParams();
 
     useEffect(() => {
-        fetchData(2000, list.find(item => item.id === itemId))
-        .then(result => setDat(result))
-        .catch(err => console.log(err))
+        const firePromiseOne = async () => {
+            const docRef = doc (db, "games", itemId);
+            const docSnap = await getDoc (docRef);
+    
+            if (docSnap.exists()) {
+                return {
+                    id: itemId, ...docSnap.data()
+                }
+            } else {
+                console.log ("No such document!");
+            }
+        }
+        firePromiseOne()
+            .then (result => setDat(result))
+            .catch (err => console.log (err))
+    }, []);
+
+    useEffect(() => {
+        return(() => {
+            setDat ([])
+        })
     }, []);
 
     return (
-        <ItemDetail data={dat} />
+        <ItemDetail data = { dat } />
     );
 };
 

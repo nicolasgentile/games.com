@@ -1,8 +1,46 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { Link } from "react-router-dom";
+import { serverTimestamp, setDoc, doc, collection, updateDoc, increment } from "firebase/firestore"; 
+import { db } from "../utils/firebaseConfig";
 
 const Cart = () => {
+
+    const createOrder = () => {
+        const order = {
+            buyer: {
+                name: 'Leo Messi',
+                email: 'messirve@example.com',
+                phone: '3415763131'
+            },
+            date: serverTimestamp(),
+            games: ctx.cartList.map (item => ({
+                id: item.id,
+                title: item.title,
+                price: item.price,
+                it: item.it
+            })),
+            total: ctx.fullValue()
+        }
+
+        const createOrderInFirestore = async () => {
+            const newOrdersRef = doc (collection(db, "orders"));
+            await setDoc(newOrdersRef, order);
+            return newOrdersRef;
+        }
+        createOrderInFirestore()
+            .then (result => { 
+                alert ('Tu orden ' + result.id + ' fue creada ')
+                ctx.cartList.forEach(async (item) => {
+                    const itemRef = doc(db, "games", item.id);
+                    await updateDoc (itemRef, {
+                        stock: increment (-item.it)
+                    });
+                });
+                ctx.emptyCart();
+            })
+            .catch (err => console.log (err))
+    };
 
     const ctx = useContext(CartContext);
 
@@ -54,7 +92,7 @@ const Cart = () => {
                 <>
                     <h5 className="space resume">Resumen</h5>
                     <h6 className="space">Total de la compra: $ {ctx.fullValue()} Final</h6>
-                    <button className="btn-outline-danger space"> Confirmar compra</button>
+                    <button className="btn-outline-danger space" onClick={createOrder}> Confirmar compra</button>
                 </>
                 }
                 </section>
