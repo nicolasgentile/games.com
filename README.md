@@ -14,7 +14,7 @@ Pero si solo deseas tener la copia en local, puedes descargarte el archivo ZIP.
 
 ## Run Locally ⚙️
 
-Este proyecto fue creado a partir de CRA React 
+Este proyecto fue creado a partir de CRA React ( npm run build )
 Luego de clonar el proyecto o ya tenerlo a su disposicion:
 
 ```bash
@@ -33,7 +33,16 @@ Instalar dependencias
   npm install
 ```
 ```bash
-  i react-router-dom
+  npm i react-router-dom
+```
+```bash
+  npm install firebase
+```
+```bash
+  npm install --save toastify-js
+```
+```bash
+  npm install sweetalert2
 ```
 
 Inicie el servidor

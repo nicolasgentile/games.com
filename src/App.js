@@ -13,12 +13,12 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path='/' element={<ItemListContainer />} />
-          <Route path='/category/:consoleId' element={<ItemListContainer />} />
-          <Route path='/detail/:itemId' element={<ItemDetailContainer />} />
-          <Route path='/cart' element={<Cart />} />
+          <Route path = '/' element = {<ItemListContainer />} />
+          <Route path = '/category/:consoleId' element = {<ItemListContainer />} />
+          <Route path = '/detail/:itemId' element = {<ItemDetailContainer />} />
+          <Route path = '/cart' element = {<Cart />} />
         </Routes>
-        <Footer some = "Footer en construccion" />
+        <Footer some = 'Footer en construccion' />
       </BrowserRouter>
     </CartContextProvider>
   );

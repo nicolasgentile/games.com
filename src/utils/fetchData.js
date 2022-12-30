@@ -10,4 +10,4 @@ export const fetchData = (time, task) => {
             }
         }, time);
     });
-}
+};

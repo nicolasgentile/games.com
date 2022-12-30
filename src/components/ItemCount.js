@@ -1,33 +1,33 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-const ItemCount = ({ stock, first, goAdd}) => {
+const ItemCount = ( { stock, first, goAdd} ) => {
     const [amount, setAmount] = useState (0); // HOOK
 
-    useEffect( () => {
-        setAmount(first);
-    },[]);
+    useEffect ( () => {
+        setAmount ( first );
+    }, [ first ] );
 
     const addProduct = () => {
-        if (amount < stock) {
-            setAmount (amount + 1);
+        if ( amount < stock ) {
+            setAmount ( amount + 1 );
         }
     };
 
     const subtractProduct = () => {
-        if (amount > first) {
-            setAmount (amount - 1);
+        if ( amount > first ) {
+            setAmount ( amount - 1 );
         };
     };
 
     return (
-        <section className="ItemCount">
-            <div className="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" className="btn btn-outline-danger" onClick={subtractProduct}>-</button>
-                <span className="amount"> {amount} º </span>
-                <button type="button" className="btn btn-outline-danger" onClick={addProduct}>+</button>
+        <section className = 'ItemCount'>
+            <div className = 'btn-group' role = 'group' aria-label = 'Basic outlined example'>
+                <button type = 'button' className = 'btn btn-outline-danger' onClick = { subtractProduct }>-</button>
+                <span className = 'amount'> { amount } º </span>
+                <button type = 'button' className = 'btn btn-outline-danger' onClick = { addProduct }>+</button>
             </div>
             <div>
-                <button type="button" className="btn btn-outline-danger" onClick={() => goAdd(amount)}>Agregar</button>
+                <button type = 'button' className = 'btn btn-outline-danger' onClick = { () => goAdd (amount) }>Agregar</button>
             </div>
         </section>
     )
