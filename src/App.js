@@ -10,7 +10,7 @@ import CartContextProvider from './components/CartContext';
 const App = () => {
   return (
     <CartContextProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/games.com">
         <Navbar />
         <Routes>
           <Route path = '/' element = {<ItemListContainer />} />
